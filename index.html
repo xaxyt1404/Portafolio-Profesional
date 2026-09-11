@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Potafolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="logo.png" type="image/png">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar">
+      <a href="#" class="logo">
+        <img src="logo1.png" alt="Logo" class="logo-img">
+        Estiben.dev
+      </a>
+
+      <button class="menu-toogle" id="menu-btn">☰</button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#about">Acerca de</a></li>
+        <li><a href="#skills">Habilidades</a></li>
+        <li><a href="#projects">Proyectos</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+
+    </nav>
+  </header>
+  <main>
+
+    <section id="inicio" class="hero">
+      <h1>¡Hola! Mi nombre es Estiben Martinez</h1>
+      <p>Estudiante de Ingeniería de Sistemas y desarrollador web.</p>
+      <a href="#contact">Contáctame</a>
+    </section>
+
+    <section id="about" class="about">
+      <h2>Acerca de mí</h2>
+      <p>Soy un apasionado por la tecnología, enfocado en crear soluciones eficientes y aprender cada día más sobre
+        desarrollo de software y sistemas.</p>
+    </section>
+
+    <section id="skills">
+      <h2>Habilidades</h2>
+      <div class="skills-container">
+
+        <div class="skill-card">
+          <div class="skill-header">
+            <span class="skill-name">HTML5</span>
+            <span class="skill-percent">60%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress html-progress"></div>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-header">
+            <span class="skill-name">CSS3</span>
+            <span class="skill-percent">65%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress css-progress"></div>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-header">
+            <span class="skill-name">JavaScript</span>
+            <span class="skill-percent">75%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress js-progress"></div>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-header">
+            <span class="skill-name">Responsive Design</span>
+            <span class="skill-percent">60%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress responsive-progress"></div>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-header">
+            <span class="skill-name">Sistemas</span>
+            <span class="skill-percent">50%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress sistemas-progress"></div>
+          </div>
+        </div>
+
+        <div class="skill-card">
+          <div class="skill-header">
+            <span class="skill-name">BackEnd</span>
+            <span class="skill-percent">40%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress backend-progress"></div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Mis Proyectos</h2>
+      <div class="projects-container">
+
+        <div class="project-card">
+          <div class="project-img" style="background-image: url('portafolio.jpg');"></div>
+
+          <div class="project-text-container">
+            <h3>Portafolio Web</h3>
+            <p>Proyecto de desarrollo web utilizando HTML5, CSS3 y JavaScript para mostrar mis habilidades y proyectos.
+            </p>
+            <a href="#" class="project-link" target="_blank">Ver Proyecto →</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-img" style="background-image: url('portafolio.png');"></div>
+
+          <div class="project-text-container">
+            <h3>IntegraSur (En desarrollo)</h3>
+            <p>Proyecto final de mi curso de desarrollo web con Fundación ROFÉ. Un proyecto personal que espero llevar
+              muy lejos.</p>
+            <a href="#" class="project-link" onclick="showToast(event, 'Este proyecto aún está en desarrollo.')">Ver
+              Proyecto →</a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-img" style="background-image: url('portafolio.png');"></div>
+
+          <div class="project-text-container">
+            <h3>Proyecto 3</h3>
+            <p>Descripción del proyecto 3</p>
+            <a href="#" class="project-link" onclick="showToast(event, 'Este proyecto aún no está disponible.')">Ver
+              Proyecto →</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <h2>Contáctame</h2>
+      <div class="contact-underline"></div>
+
+      <div class="contact-wrapper">
+        <div class="contact-info-wrapper">
+
+          <div class="info-card">
+            <i class="fa-solid fa-envelope"></i>
+            <div>
+              <span class="info-title">Email</span>
+              <span class="info-text">martineze1422@gmail.com</span>
+              <span class="info-text">xaxyt1404@gmail.com</span>
+              <span class="info-text">XaX_11@outlook.com</span>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <span class="info-title">Teléfono</span>
+              <span class="info-text">+57 313 629 7041</span>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <span class="info-title">Ubicación</span>
+              <span class="info-text">Arjona, Bolívar, Colombia</span>
+            </div>
+          </div>
+
+        </div>
+
+        <form class="contact-form">
+
+          <div class="form-group">
+            <label for="name">Nombre</label>
+            <input type="text" id="name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Mensaje</label>
+            <textarea id="message" rows="4" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <button type="submit" class="submit-btn">Enviar</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-links">
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+        <a href="#">Discord</a>
+        <a href="#">Instagram</a>
+      </div>
+      <p>&copy; 2025 Mi Portafolio Profesional - Todos los derechos reservados</p>
+    </footer>
+
+  </main>
+  <div id="toast" class="toast"></div>
+  <script src="script.js"></script>
+</body>
