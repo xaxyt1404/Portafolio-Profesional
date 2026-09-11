@@ -100,7 +100,7 @@ header {
 }
 
 .menu-toggle {
-  display: block;
+  display: none;
   background: transparent;
   border: none;
   color: var(--white);
