@@ -27,13 +27,65 @@ html {
   box-sizing: border-box;
 }
 
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
 @media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    color: var(--color-bg);
+    border: none;
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+  }
+
   .nav-links {
     display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--gradient-brand);
+    padding: 1.5rem 0;
+    gap: 1.2rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .nav-links a {
+    color: var(--color-bg);
+    font-size: 1.1rem;
   }
 
   .nav-links.active {
     display: flex;
+  }
+
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+
+  #about,
+  #skills,
+  #projects,
+  #contact {
+    padding: 2rem 1rem;
+  }
+
+  .skills-container,
+  .projects-container {
+    padding: 0 1rem;
+  }
+
+  .skill-card,
+  .project-card {
+    width: 100%;
+    max-width: 22rem;
   }
 }
 
