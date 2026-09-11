@@ -100,10 +100,18 @@ header {
 }
 
 .menu-toggle {
-  display: none;
-  background: none;
-  font-size: 1.5rem;
+  display: block;
+  background: transparent;
+  border: none;
+  color: var(--white);
+  font-size: 2rem;
   cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.menu-toggle:hover {
+  color: var(--color-primary);
+  transform: translateX(-2px);
 }
 
 .hero {
@@ -505,7 +513,18 @@ body {
 
 @media (max-width: 768px) {
   .navbar {
-    position: relative;
+    position: fixed;
+    background: var(--gradient-brand);
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+
+  main,
+  header,
+  .hero {
+    margin-top: 60px;
   }
 
   .menu-toggle {
@@ -515,6 +534,12 @@ body {
     color: var(--white);
     font-size: 2rem;
     cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+
+  .menu-toggle:hover {
+    color: var(--color-primary);
+    transform: translateX(-2px);
   }
 
   .nav-links {
@@ -550,6 +575,7 @@ body {
 
   .contact-wrapper {
     grid-template-columns: 1fr !important;
+    justify-items: center;
     width: 100%;
     padding: 0 1rem;
   }
@@ -575,4 +601,42 @@ body {
     width: 100% !important;
     max-width: 22rem !important;
   }
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.footer-links a {
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 1.8rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.footer-links a:hover {
+  transform: translateY(-5px);
+}
+
+.footer-links a.linkedin:hover {
+  color: #0a66c2;
+}
+
+.footer-links a.github:hover {
+  color: #1f2937;
+}
+
+.footer-links a.discord:hover {
+  color: #5865f2;
+}
+
+.footer-links a.instagram:hover {
+  background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
