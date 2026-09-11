@@ -27,6 +27,16 @@ html {
   box-sizing: border-box;
 }
 
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
 body {
   font-family: var(--font-mono);
   color: var(--color-text);
