@@ -252,6 +252,50 @@ header {
   border-top-right-radius: var(--radius-lg);
 }
 
+.project-img--coming-soon {
+  background-image: var(--gradient-brand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--color-bg);
+  position: relative;
+  overflow: hidden;
+}
+
+.project-img--coming-soon::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.project-img--coming-soon .coming-soon-text {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-family: var(--font-poppins);
+}
+
+.project-img--coming-soon .coming-soon-text .emoji {
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.project-img--coming-soon .coming-soon-text .title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.project-img--coming-soon .coming-soon-text .subtitle {
+  font-size: 0.85rem;
+  font-weight: 500;
+  opacity: 0.95;
+}
+
 .project-card h3 {
   margin-top: -25px;
   color: var(--color-text);
