@@ -99,7 +99,7 @@ header {
   color: var(--color-primary);
 }
 
-.menu-toogle {
+.menu-toggle {
   display: none;
   background: none;
   font-size: 1.5rem;
