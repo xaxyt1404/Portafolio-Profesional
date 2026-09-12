@@ -8,14 +8,14 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Mi Portafolio">
   <meta property="og:description"
-    content="Mi Portafolio Web, donde puedes encontrar mis proyectos, habilidades y información sobre mí.">
+    content="Mi Portafolio Web, donde puedes encontrar mis proyectos, habilidades e información sobre mí.">
   <meta property="og:image" content="https://xaxyt1404.github.io/Portafolio-Profesional/banner.jpg">
   <meta property="og:url" content="https://xaxyt1404.github.io/Portafolio-Profesional/">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Mi Portafolio">
   <meta name="twitter:description"
-    content="Mi Portafolio Web, donde puedes encontrar mis proyectos, habilidades y información sobre mí.">
+    content="Mi Portafolio Web, donde puedes encontrar mis proyectos, habilidades e información sobre mí.">
   <meta name="twitter:image" content="https://xaxyt1404.github.io/Portafolio-Profesional/banner.jpg">
 
   <title>Mi Portafolio</title>
@@ -35,7 +35,7 @@
         Estiben.dev
       </a>
 
-      <button class="menu-toggle" id="menu-btn">☰</button>
+      <button class="menu-toggle" id="menu-btn" aria-label="Abrir menú">☰</button>
 
       <ul class="nav-links" id="nav-links">
         <li><a href="#inicio">Inicio</a></li>
@@ -47,6 +47,7 @@
 
     </nav>
   </header>
+
   <main>
 
     <section id="inicio" class="hero">
@@ -140,8 +141,7 @@
             <p>Proyecto de desarrollo web utilizando HTML5, CSS3 y JavaScript para mostrar mis habilidades y proyectos.
             </p>
             <a href="https://github.com/xaxyt1404/Portafolio-Profesional" class="project-link" target="_blank"
-              rel="noopener noreferrer">Ver
-              Proyecto →</a>
+              rel="noopener noreferrer">Ver Proyecto →</a>
           </div>
         </div>
 
@@ -182,8 +182,6 @@
             <i class="fa-solid fa-envelope"></i>
             <div>
               <span class="info-title">Email</span>
-              <span class="info-text">martineze1422@gmail.com</span>
-              <span class="info-text">xaxyt1404@gmail.com</span>
               <span class="info-text">XaX_11@outlook.com</span>
             </div>
           </div>
@@ -210,17 +208,17 @@
 
           <div class="form-group">
             <label for="name">Nombre</label>
-            <input type="text" id="name" required>
+            <input type="text" id="name" name="name" autocomplete="name" required>
           </div>
 
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" id="email" required>
+            <input type="email" id="email" name="email" autocomplete="email" required>
           </div>
 
           <div class="form-group">
             <label for="message">Mensaje</label>
-            <textarea id="message" rows="4" required></textarea>
+            <textarea id="message" name="message" rows="4" required></textarea>
           </div>
 
           <div class="form-group">
@@ -230,29 +228,59 @@
       </div>
     </section>
 
-    <footer>
-      <div class="footer-links">
-        <a href="https://www.linkedin.com/in/estiben-martinez-3316b6409/" target="_blank" rel="noopener noreferrer"
-          aria-label="LinkedIn" class="social-icon linkedin">
-          <i class="fa-brands fa-linkedin"></i>
-        </a>
-        <a href="https://github.com/xaxyt1404" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
-          class="social-icon github">
-          <i class="fa-brands fa-github"></i>
-        </a>
-        <a href="https://discord.com/users/1148788321330409482" target="_blank" rel="noopener noreferrer"
-          aria-label="Discord" class="social-icon discord">
-          <i class="fa-brands fa-discord"></i>
-        </a>
-        <a href="https://www.instagram.com/yesid.p.11/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
-          class="social-icon instagram">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-      </div>
-      <p>&copy; 2025 Mi Portafolio Profesional - Todos los derechos reservados</p>
-    </footer>
-
   </main>
+
+  <footer>
+    <div class="footer-links">
+      <a href="https://www.linkedin.com/in/estiben-martinez-3316b6409/" target="_blank" rel="noopener noreferrer"
+        aria-label="LinkedIn" class="social-icon linkedin">
+        <i class="fa-brands fa-linkedin"></i>
+      </a>
+      <a href="https://github.com/xaxyt1404" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
+        class="social-icon github">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a href="https://discord.com/users/1148788321330409482" target="_blank" rel="noopener noreferrer"
+        aria-label="Discord" class="social-icon discord">
+        <i class="fa-brands fa-discord"></i>
+      </a>
+      <a href="https://www.instagram.com/yesid.p.11/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+        class="social-icon instagram">
+        <i class="fa-brands fa-instagram"></i>
+      </a>
+    </div>
+    <p>&copy; 2025 Mi Portafolio Profesional - Todos los derechos reservados</p>
+  </footer>
+
   <div id="toast" class="toast"></div>
+
+  <aside class="theme-edge-panel" id="theme-panel">
+    <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Cambiar tema">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+        <path
+          d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM12 4V20C16.4183 20 20 16.4183 20 12C20 7.58172 16.4183 4 12 4Z" />
+      </svg>
+    </button>
+
+    <div class="theme-options-card">
+      <h4>Tema del sitio</h4>
+
+      <div class="theme-options">
+        <button class="theme-btn" data-theme-val="light">
+          <span>☀️</span>Claro
+        </button>
+        <button class="theme-btn" data-theme-val="dark">
+          <span>🌙</span>Oscuro
+        </button>
+        <button class="theme-btn active" data-theme-val="system">
+          <span>💻</span>Sistema
+        </button>
+      </div>
+
+    </div>
+  </aside>
+
   <script src="script.js"></script>
+
 </body>
+</html>
