@@ -14,16 +14,27 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelector('.nav-links');
 
   if (menuToggle && navLinks) {
-    menuToggle.addEventListener('click', () => {
+    // Abrir/Cerrar menú con el botón hamburguesa
+    menuToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
       navLinks.classList.toggle('active');
       menuToggle.classList.toggle('is-active');
     });
 
+    // Cerrar el menú al hacer clic en cualquier enlace
     document.querySelectorAll('.nav-links a').forEach(link => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('active');
         menuToggle.classList.remove('is-active');
       });
+    });
+
+    // Cerrar el menú si el usuario hace clic fuera de él
+    document.addEventListener('click', (e) => {
+      if (!navLinks.contains(e.target) && !menuToggle.contains(e.target)) {
+        navLinks.classList.remove('active');
+        menuToggle.classList.remove('is-active');
+      }
     });
   }
 
@@ -106,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
 
-    // Actualiza la clase activa en los 3 botones
+    // Actualiza la clase activa en los botones de tema
     themeBtns.forEach(btn => {
       if (btn.getAttribute('data-theme-val') === theme) {
         btn.classList.add('active');
@@ -129,16 +140,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  // Escuchar si cambia el tema del sistema operativo
+  // Escuchar si cambia el tema del sistema operativo en tiempo real
   systemPrefersDark.addEventListener('change', () => {
     const saved = localStorage.getItem('theme');
     if (!saved || saved === 'system') {
       setTheme('system');
     }
   });
-});
 
-document.addEventListener('DOMContentLoaded', () => {
+  // --- BOTONES CON TOAST DIRECTO ---
   document.querySelectorAll('[data-toast]').forEach(element => {
     element.addEventListener('click', (e) => {
       e.preventDefault();
