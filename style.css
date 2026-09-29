@@ -267,12 +267,12 @@ header {
   background-image: var(--gradient-progress);
 }
 
-.html-progress { width: 60%; }
-.css-progress { width: 65%; }
-.js-progress { width: 75%; }
-.responsive-progress { width: 60%; }
-.sistemas-progress { width: 50%; }
-.backend-progress { width: 40%; }
+.html-progress { width: 30%; }
+.css-progress { width: 35%; }
+.js-progress { width: 30%; }
+.responsive-progress { width: 35%; }
+.sistemas-progress { width: 20%; }
+.backend-progress { width: 10%; }
 
 /* Proyectos */
 .project-img {
