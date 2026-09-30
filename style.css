@@ -30,7 +30,7 @@
 }
 
 /* ==========================================
-   2. CONFIGURACIÓN BASE & TIPOGRAFÍA
+   2. CONFIGURACIÓN BASE Y TIPOGRAFÍA
    ========================================== */
 *,
 *::before,
@@ -56,7 +56,12 @@ body {
   max-width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
 .logo,
 .nav-links a,
 .skill-card,
@@ -66,8 +71,27 @@ h1, h2, h3, h4, h5, h6,
 .form-group label,
 .submit-btn,
 .footer-links a,
-.toast {
+.toast,
+.coming-soon-text {
   font-family: var(--font-poppins);
+}
+
+/* Transición global para tema */
+body,
+header,
+nav,
+section,
+div,
+article,
+button,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
 }
 
 /* ==========================================
@@ -142,7 +166,6 @@ header {
 /* ==========================================
    4. SECCIONES PRINCIPALES
    ========================================== */
-/* Hero Section */
 .hero {
   display: flex;
   flex-direction: column;
@@ -158,7 +181,6 @@ header {
   font-weight: 600;
 }
 
-/* General Sections */
 #about {
   max-width: 800px;
   margin: 4rem auto;
@@ -197,6 +219,21 @@ header {
 /* ==========================================
    5. TARJETAS Y COMPONENTES
    ========================================== */
+.skills-category {
+  display: block;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.skills-category h3 {
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .skills-container,
 .projects-container {
   display: flex;
@@ -211,6 +248,7 @@ header {
 .contact-form {
   border-radius: var(--radius-lg);
   background-color: var(--white);
+  text-align: left;
 }
 
 .skill-card,
@@ -226,14 +264,17 @@ header {
   width: 20rem;
 }
 
-.project-card {
-  padding: 0;
-  overflow: hidden;
+/* Modificación exclusiva para hacer las tarjetas de habilidades más chatas */
+.skill-card {
+  padding: 0.8rem 1rem !important;
 }
 
-.project-card h3 {
-  margin-top: -25px;
-  color: var(--color-text);
+.skill-card .skill-header {
+  margin-bottom: 0.1rem;
+}
+
+.skill-card .skill-name {
+  font-size: 0.85rem;
 }
 
 /* Habilidades - Barras de Progreso */
@@ -267,14 +308,57 @@ header {
   background-image: var(--gradient-progress);
 }
 
-.html-progress { width: 30%; }
-.css-progress { width: 35%; }
-.js-progress { width: 30%; }
-.responsive-progress { width: 35%; }
-.sistemas-progress { width: 20%; }
-.backend-progress { width: 10%; }
+.electrica-progress {
+  width: 80%;
+}
+
+.mantenimiento-progress {
+  width: 100%;
+}
+
+.optimizacion-progress {
+  width: 85%;
+}
+
+.html-progress {
+  width: 30%;
+}
+
+.css-progress {
+  width: 35%;
+}
+
+.js-progress {
+  width: 30%;
+}
+
+.responsive-progress {
+  width: 35%;
+}
+
+.java-progress {
+  width: 10%;
+}
+
+.cplus-progress {
+  width: 25%;
+}
+
+.linux-progress {
+  width: 30%;
+}
 
 /* Proyectos */
+.project-card {
+  padding: 0;
+  overflow: hidden;
+}
+
+.project-card h3 {
+  margin-top: -25px;
+  color: var(--color-text);
+}
+
 .project-img {
   height: 12rem;
   background-size: cover;
@@ -308,7 +392,6 @@ header {
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
-  font-family: var(--font-poppins);
 }
 
 .project-img--coming-soon .coming-soon-text .emoji {
@@ -394,7 +477,6 @@ header {
 .info-card {
   display: flex;
   align-items: center;
-  flex-direction: row;
   gap: 0.4rem;
   padding: 1.2rem;
   box-shadow: var(--shadow-md);
@@ -433,7 +515,6 @@ header {
 }
 
 .form-group label {
-  display: block;
   font-size: 1rem;
   color: var(--color-text);
   font-weight: 500;
@@ -516,7 +597,6 @@ footer p {
 
 .footer-links {
   display: flex;
-  flex-direction: row;
   gap: 2rem;
   justify-content: center;
   margin-bottom: 1rem;
@@ -533,9 +613,18 @@ footer p {
   transform: translateY(-5px);
 }
 
-.footer-links a.linkedin:hover { color: #0a66c2; }
-.footer-links a.github:hover { color: #1f2937; }
-.footer-links a.discord:hover { color: #5865f2; }
+.footer-links a.linkedin:hover {
+  color: #0a66c2;
+}
+
+.footer-links a.github:hover {
+  color: #1f2937;
+}
+
+.footer-links a.discord:hover {
+  color: #5865f2;
+}
+
 .footer-links a.instagram:hover {
   background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
   background-clip: text;
@@ -621,15 +710,7 @@ footer p {
 }
 
 /* ==========================================
-   10. TRANSICIÓN GLOBAL PARA CAMBIO DE TEMA
-   ========================================== */
-h1, h2, h3, h4, h5, h6,
-body, header, nav, section, div, article, button, p {
-  transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
-}
-
-/* ==========================================
-   11. DISEÑO RESPONSIVO (MEDIA QUERIES)
+   10. DISEÑO RESPONSIVO (MEDIA QUERIES)
    ========================================== */
 @media (max-width: 768px) {
   .navbar {
