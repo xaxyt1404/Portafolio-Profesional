@@ -348,6 +348,14 @@ header {
   width: 30%;
 }
 
+.virtualizacion-progress {
+  width: 50%;
+}
+
+.pensamiento-progress {
+  width: 45%;
+}
+
 /* Proyectos */
 .project-card {
   padding: 0;
